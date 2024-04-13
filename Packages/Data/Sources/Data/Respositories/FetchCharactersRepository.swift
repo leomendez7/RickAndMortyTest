@@ -1,5 +1,5 @@
 //
-//  FetchCardsListRepository.swift
+//  FetchCharactersRepository.swift
 //
 //
 //  Created by Leonardo Mendez on 13/04/24.
@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-public class FetchCardsListRepository: FetchCharactersRepositoryProtocol {
+public class FetchCharactersRepository: FetchCharactersRepositoryProtocol {
     
     let dataSource: FetchCharactersDataSource
     

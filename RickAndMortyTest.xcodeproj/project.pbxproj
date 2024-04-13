@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		161AA2C12BCB0D9E0013FC49 /* RickAndMortyTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AA2C02BCB0D9E0013FC49 /* RickAndMortyTestApp.swift */; };
-		161AA2C32BCB0D9E0013FC49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AA2C22BCB0D9E0013FC49 /* ContentView.swift */; };
 		161AA2C52BCB0D9F0013FC49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AA2C42BCB0D9F0013FC49 /* Assets.xcassets */; };
 		161AA2C82BCB0D9F0013FC49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161AA2C72BCB0D9F0013FC49 /* Preview Assets.xcassets */; };
 		161AA2D62BCB27F10013FC49 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 161AA2D52BCB27F10013FC49 /* Data */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		161AA2BD2BCB0D9E0013FC49 /* RickAndMortyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		161AA2C02BCB0D9E0013FC49 /* RickAndMortyTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTestApp.swift; sourceTree = "<group>"; };
-		161AA2C22BCB0D9E0013FC49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		161AA2C42BCB0D9F0013FC49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		161AA2C72BCB0D9F0013FC49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		161AA2CF2BCB174F0013FC49 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 			children = (
 				161AA2D32BCB27E20013FC49 /* Info.plist */,
 				161AA2C02BCB0D9E0013FC49 /* RickAndMortyTestApp.swift */,
-				161AA2C22BCB0D9E0013FC49 /* ContentView.swift */,
 				161AA2C42BCB0D9F0013FC49 /* Assets.xcassets */,
 				161AA2C62BCB0D9F0013FC49 /* Preview Content */,
 			);
@@ -177,7 +174,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				161AA2C32BCB0D9E0013FC49 /* ContentView.swift in Sources */,
 				161AA2C12BCB0D9E0013FC49 /* RickAndMortyTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
