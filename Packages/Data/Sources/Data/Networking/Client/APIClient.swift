@@ -74,4 +74,10 @@ public actor APIClient {
         return await task.response
     }
     
+    /// Sends a HTTP request with a given URLRequest
+    func urlRequest<T: Decodable>(_ urlRequest: URLRequest) async -> DataResponse<T, AFError> {
+        let task = session.request(urlRequest).validate().serializingDecodable(T.self)
+        return await task.response
+    }
+    
 }

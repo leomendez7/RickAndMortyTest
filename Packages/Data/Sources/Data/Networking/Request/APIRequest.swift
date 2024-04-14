@@ -27,7 +27,7 @@ struct APIRequest {
         self.headers = headers
         self.parameters = parameters
         self.parameterEncoding = parameterEncoding
-        //self.setupDefaultEncoding()
+        self.setupDefaultEncoding()
     }
 
     private mutating func setupDefaultEncoding() {
@@ -38,5 +38,6 @@ struct APIRequest {
             self.parameterEncoding = URLEncoding.default
         }
     }
+    
 }
 

@@ -25,9 +25,9 @@ struct CharacterDetailsView: View {
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 VStack(spacing: 8) {
-                    InformationDetailView(information: "Status: \(character.status.rawValue)")
-                    InformationDetailView(information: "Species: \(character.species.rawValue)")
-                    InformationDetailView(information: "Gender: \(character.gender.rawValue)")
+                    InformationDetailView(information: "Status: \(character.status)")
+                    InformationDetailView(information: "Species: \(character.species)")
+                    InformationDetailView(information: "Gender: \(character.gender)")
                     InformationDetailView(information: "Origin: \(character.origin.name)")
                     InformationDetailView(information: "Location: \(character.location.name)")
                     InformationDetailView(information: "Number of episodes: \(character.episode.count)")
@@ -42,7 +42,6 @@ struct CharacterDetailsView: View {
             .padding(.top, 18)
         }
         .navigationTitle(character.name)
-        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackNavigationButtonView(action: {
             store.details.removeLast()

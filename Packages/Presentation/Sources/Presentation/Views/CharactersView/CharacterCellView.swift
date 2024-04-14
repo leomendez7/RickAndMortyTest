@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct CHaracterCellView: View {
+struct CharacterCellView: View {
     
     @State var name: String
     @State var species: String
@@ -50,5 +50,5 @@ struct CHaracterCellView: View {
 }
 
 #Preview {
-    CHaracterCellView(name: "Rick Sanchez", species: "Human", imageUrl: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")
+    CharacterCellView(name: "Rick Sanchez", species: "Human", imageUrl: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")
 }

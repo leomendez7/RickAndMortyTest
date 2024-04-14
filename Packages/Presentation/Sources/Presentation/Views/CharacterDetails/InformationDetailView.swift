@@ -21,6 +21,7 @@ struct InformationDetailView: View {
             }
             Divider().background(Color(named: .black2)).frame(height: 1)
         }
+        
     }
 }
 
