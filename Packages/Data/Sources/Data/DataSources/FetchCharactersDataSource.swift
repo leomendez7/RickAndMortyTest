@@ -19,8 +19,9 @@ public class FetchCharactersDataSource: FetchCharactersRepositoryProtocol {
     }
     
     public func fetchCharacters(page: String) async throws -> [Character] {
-        let path = "character"
-        let response: DataResponse<CharacterResponse, AFError> = await apiClient.get(path)
+        let path = "character/"
+        let parameters = ["page": page]
+        let response: DataResponse<CharacterResponse, AFError> = await apiClient.get(path, parameters: parameters)
         let result = response.result
         switch result {
         case .success(let response):

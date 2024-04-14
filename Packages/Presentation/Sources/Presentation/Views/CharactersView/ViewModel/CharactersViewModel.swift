@@ -19,24 +19,24 @@ public class CharactersViewModel: BaseViewModel<FetchCharactersUseCase>, Observa
         super.init(useCase: useCase)
     }
     
-    func fetchCharacters() async {
+    func fetchCharacters(page: String) async {
         do {
-            guard let characters = Default.characterResponse else {
-                let defaults = UserDefaults.standard
-                defaults.removeObject(forKey: Default.Key.character.rawValue)
-                let response = try await useCase.execute(requestValue: "")
+//            guard let characters = Default.characterResponse else {
+//                let defaults = UserDefaults.standard
+//                defaults.removeObject(forKey: Default.Key.character.rawValue)
+                let response = try await useCase.execute(requestValue: page)
                 DispatchQueue.main.async {
                     response.forEach { character in
                         self.characters.append(character)
                     }
                 }
-                return
-            }
-            DispatchQueue.main.async {
-                characters.characters.forEach { character in
-                    self.characters.append(character)
-                }
-            }
+//                return
+//            }
+//            DispatchQueue.main.async {
+//                characters.characters.forEach { character in
+//                    self.characters.append(character)
+//                }
+//            }
         } catch {
             DispatchQueue.main.async {
                 self.isRequestError.toggle()
