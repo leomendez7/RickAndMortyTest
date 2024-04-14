@@ -11,12 +11,38 @@ import Domain
 public class CharactersViewModel: BaseViewModel<FetchCharactersUseCase>, ObservableObject {
     
     var store: Store
-    @Published var cards: [Character] = []
-    @Published var isrequestError: Bool = false
+    @Published var characters: [Character] = []
+    @Published var isRequestError: Bool = false
     
     public init(useCase: FetchCharactersUseCase, store: Store) {
         self.store = store
         super.init(useCase: useCase)
+    }
+    
+    func fetchCharacters() async {
+        do {
+            guard let characters = Default.characterResponse else {
+                let defaults = UserDefaults.standard
+                defaults.removeObject(forKey: Default.Key.character.rawValue)
+                let response = try await useCase.execute(requestValue: "")
+                DispatchQueue.main.async {
+                    response.forEach { character in
+                        self.characters.append(character)
+                    }
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                characters.characters.forEach { character in
+                    self.characters.append(character)
+                }
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.isRequestError.toggle()
+            }
+            print(error.localizedDescription)
+        }
     }
     
 }

@@ -34,11 +34,28 @@ public struct Character: Codable {
     public let species: Species
     public let type: String
     public let gender: Gender
-    public let origin, location: Location
+    public let origin: Location
+    public let location: Location
     public let image: String
     public let episode: [String]
     public let url: String
     public let created: String
+    
+    public init() {
+        self.id = 0
+        self.name = ""
+        self.status = .unknown
+        self.species = .human
+        self.type = ""
+        self.gender = .unknown
+        self.origin = Location()
+        self.location = Location()
+        self.image = ""
+        self.episode = []
+        self.url = ""
+        self.created = ""
+    }
+    
 }
 
 public enum Gender: String, Codable {
@@ -49,8 +66,13 @@ public enum Gender: String, Codable {
 
 // MARK: - Location
 public struct Location: Codable {
-    let name: String
-    let url: String
+    public let name: String
+    public let url: String
+    
+    public init() {
+        name = ""
+        url = ""
+    }
 }
 
 public enum Species: String, Codable {

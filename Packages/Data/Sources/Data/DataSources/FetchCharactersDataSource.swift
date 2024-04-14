@@ -25,6 +25,7 @@ public class FetchCharactersDataSource: FetchCharactersRepositoryProtocol {
         switch result {
         case .success(let response):
             AppLogger.debug(response.convertToJSON())
+            Default.save(characterResponse: response)
             return response.characters
         case .failure(let error):
             AppLogger.error(error.localizedDescription, context: error)

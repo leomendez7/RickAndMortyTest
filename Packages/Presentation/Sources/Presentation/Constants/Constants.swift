@@ -12,7 +12,7 @@ import Alamofire
 
 public class Constants {
     
-    public static var cardListViewModel =  generateCharactersViewModule()
+    public static var charactersViewModel =  generateCharactersViewModule()
 
     private static func generateCharactersViewModule() -> CharactersViewModel {
         let repository = FetchCharactersRepository(dataSource: FetchCharactersDataSource(apiClient: createClient()))

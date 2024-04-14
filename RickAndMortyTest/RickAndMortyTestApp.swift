@@ -16,7 +16,7 @@ struct RickAndMortyTestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CharactersView()
+            CharactersView(viewModel: Constants.charactersViewModel)
                 .environmentObject(Store.storeDefault)
         }
     }
