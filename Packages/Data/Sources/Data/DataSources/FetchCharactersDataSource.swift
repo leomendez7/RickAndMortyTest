@@ -7,12 +7,11 @@
 
 import Foundation
 import Domain
-import Alamofire
 import Shared
 
 public class FetchCharactersDataSource: FetchCharactersRepositoryProtocol {
 
-    let urlBase: String
+    var urlBase: String
     
     public init(urlBase: String) {
         self.urlBase = urlBase

@@ -25,7 +25,6 @@ struct CharacterCellView: View {
                     .frame(width: 50, height: 50)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            
             HStack {
                 VStack(alignment: .leading) {
                     Text(name)

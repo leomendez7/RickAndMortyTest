@@ -8,7 +8,6 @@
 import Foundation
 import Domain
 import Data
-import Alamofire
 
 public class Constants {
     
