@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Domain
-import Kingfisher
 
 struct CharacterDetailsView: View {
     
@@ -18,12 +17,16 @@ struct CharacterDetailsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 15) {
-                KFImage.url(URL(string: character.image)).placeholder {
+                if character.image.isEmpty {
                     Rectangle()
-                        .fill(Color(named: .black))
+                        .fill(Color(named: .black2))
                         .frame(width: 200, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                } else {
+                    ImageWithUrl(urlString: character.image)
+                        .frame(width: 200, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 8))
                 VStack(spacing: 8) {
                     InformationDetailView(information: "Status: \(character.status)")
                     InformationDetailView(information: "Species: \(character.species)")

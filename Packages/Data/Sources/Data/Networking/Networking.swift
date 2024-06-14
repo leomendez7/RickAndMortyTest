@@ -20,10 +20,9 @@ public class Networking {
             URLQueryItem(name: "page", value: page)
         ]
         guard let url = urlComponents.url else {
-            print("Error: Invalid URL")
+            print("Error: Invalid URL components")
             return nil
         }
         return url
     }
-    
 }
