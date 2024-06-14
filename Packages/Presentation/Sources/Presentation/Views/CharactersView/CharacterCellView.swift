@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Kingfisher
+import Combine
 
 struct CharacterCellView: View {
     
@@ -16,18 +16,16 @@ struct CharacterCellView: View {
     
     var body: some View {
         HStack {
-            KFImage.url(URL(string: imageUrl)).placeholder { progress in
-                if imageUrl.isEmpty {
-                    Rectangle()
-                        .fill(Color(named: .black2))
-                        .frame(width: 50, height: 50)
-                } else {
-                    ProgressView()
-                }
+            if imageUrl.isEmpty {
+                Rectangle()
+                    .fill(Color(named: .black2))
+                    .frame(width: 50, height: 50)
+            } else {
+                ImageWithUrl(urlString: imageUrl)
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            .resizable()
-            .frame(width: 50, height: 50)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            
             HStack {
                 VStack(alignment: .leading) {
                     Text(name)

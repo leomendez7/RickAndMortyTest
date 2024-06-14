@@ -17,13 +17,12 @@ let package = Package(
     dependencies: [
         .package(path: "../Domain"),
         .package(path: "../Shared"),
-        .package(path: "../Data"),
-        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.0.0")
+        .package(path: "../Data")
     ],
     targets: [
         .target(
             name: "Presentation",
-            dependencies: ["Domain", "Shared", "Data", "Kingfisher"]),
+            dependencies: ["Domain", "Shared", "Data"]),
         .testTarget(
             name: "PresentationTests",
             dependencies: ["Presentation"]),
