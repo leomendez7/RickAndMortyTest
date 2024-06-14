@@ -17,12 +17,11 @@ let package = Package(
     dependencies: [
         .package(path: "../Domain"),
         .package(path: "../Shared"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.2"),
     ],
     targets: [
         .target(
             name: "Data",
-            dependencies: ["Domain", "Shared", "Alamofire"]),
+            dependencies: ["Domain", "Shared"]),
         .testTarget(
             name: "DataTests",
             dependencies: ["Data"]),
